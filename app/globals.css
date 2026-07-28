@@ -1,0 +1,182 @@
+:root {
+  --color-bg: #ffffff;
+  --color-bg-subtle: #fbfbfd;
+  --color-text: #1d1d1f;
+  --color-text-secondary: #6e6e73;
+  --color-accent: #0071e3;
+  --color-accent-hover: #0077ed;
+  --color-border: #d2d2d7;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --nav-height: 44px;
+  --section-padding-y: 140px;
+  --max-width: 1000px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+/* Visible keyboard focus, kept quiet but present */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--section-padding-y) 0;
+}
+
+.section-divider {
+  border-top: 1px solid var(--color-border);
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 0 0 16px 0;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.h1 {
+  font-size: clamp(40px, 7vw, 80px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.h2 {
+  font-size: clamp(32px, 4.5vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.body-large {
+  font-size: clamp(19px, 2.2vw, 24px);
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+.body {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 980px;
+  font-size: 17px;
+  font-weight: 400;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 113, 227, 0.06);
+}
+
+.link-arrow {
+  color: var(--color-accent);
+  font-size: 17px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.15s ease;
+}
+
+.link-arrow:hover {
+  gap: 8px;
+}
+
+@media (max-width: 734px) {
+  :root {
+    --section-padding-y: 88px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .about-grid p,
+  .about-grid div[style*="flex-wrap"] {
+    justify-content: center;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

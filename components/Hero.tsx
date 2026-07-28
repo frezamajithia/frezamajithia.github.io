@@ -12,15 +12,16 @@ export default function Hero() {
         paddingBottom: 60,
       }}
     >
-      <p className="eyebrow">UI/UX Designer</p>
+      <p className="eyebrow">Computer Science Graduate</p>
       <h1 className="h1" style={{ maxWidth: 780 }}>
-        Design that gets
+        Passionate about building
         <br />
-        out of the way.
+        thoughtful technology.
       </h1>
-      <p className="body-large" style={{ maxWidth: 560, marginTop: 24 }}>
-        I'm Freza — I design clear, considered interfaces for web and mobile
-        products. Here's a look at some recent work.
+      <p className="body-large" style={{ maxWidth: 620, marginTop: 24 }}>
+        Through software engineering, product thinking, quality assurance,
+        and user-centered design — I'm Freza, and here's a look at how I
+        approach problems.
       </p>
       <div style={{ display: "flex", gap: 16, marginTop: 40 }}>
         <a href="#projects" className="btn btn-primary">

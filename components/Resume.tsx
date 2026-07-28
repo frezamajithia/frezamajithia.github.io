@@ -1,18 +1,18 @@
 const EXPERIENCE = [
   {
-    role: "UI/UX Designer",
-    org: "Company Name",
-    period: "2023 — Present",
+    role: "TODO — your most recent role/title",
+    org: "TODO — company or organization",
+    period: "TODO — e.g. 2024 — Present",
   },
   {
-    role: "Product Design Intern",
-    org: "Company Name",
-    period: "2022 — 2023",
+    role: "TODO — previous role/title",
+    org: "TODO — company or organization",
+    period: "TODO — e.g. 2023 — 2024",
   },
   {
-    role: "B.Des, Interaction Design",
-    org: "University Name",
-    period: "2019 — 2023",
+    role: "B.Sc, Computer Science",
+    org: "Ontario Tech University",
+    period: "TODO — confirm your years",
   },
 ];
 
@@ -27,12 +27,19 @@ export default function Resume() {
             alignItems: "flex-end",
             flexWrap: "wrap",
             gap: 24,
-            marginBottom: 56,
+            marginBottom: 40,
           }}
         >
           <div>
             <p className="eyebrow">Experience</p>
-            <h2 className="h2">Resume</h2>
+            <h2 className="h2" style={{ marginBottom: 12 }}>
+              Resume
+            </h2>
+            <p className="body" style={{ maxWidth: 460, fontSize: 15 }}>
+              Tailored resumes are available for Software Engineering,
+              Product, IT Systems, Quality Engineering, and Cybersecurity
+              opportunities — reach out and I'll send the right one.
+            </p>
           </div>
           <a href="/resume.pdf" className="btn btn-primary" download>
             Download résumé

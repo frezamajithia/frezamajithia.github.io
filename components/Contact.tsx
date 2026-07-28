@@ -1,7 +1,7 @@
 const LINKS = [
-  { label: "Email", value: "hello@frezamajithia.com", href: "mailto:hello@frezamajithia.com" },
-  { label: "LinkedIn", value: "linkedin.com/in/frezamajithia", href: "https://linkedin.com/in/frezamajithia" },
-  { label: "Dribbble", value: "dribbble.com/frezamajithia", href: "https://dribbble.com/frezamajithia" },
+  { label: "Email", value: "TODO@example.com", href: "mailto:TODO@example.com" },
+  { label: "LinkedIn", value: "linkedin.com/in/TODO", href: "https://linkedin.com/in/TODO" },
+  { label: "GitHub", value: "github.com/TODO", href: "https://github.com/TODO" },
 ];
 
 export default function Contact() {

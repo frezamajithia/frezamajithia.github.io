@@ -3,11 +3,12 @@
 import { useEffect, useState } from "react";
 
 const LINKS = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#resume", label: "Resume" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#home", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/process", label: "Process" },
+  { href: "/#resume", label: "Resume" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Nav() {
@@ -27,8 +28,8 @@ export default function Nav() {
         top: 0,
         zIndex: 50,
         height: "var(--nav-height)",
-        background: scrolled ? "rgba(255,255,255,0.8)" : "transparent",
-        backdropFilter: scrolled ? "saturate(180%) blur(20px)" : "none",
+        background: scrolled ? "rgba(255,255,255,0.8)" : "rgba(255,255,255,0.6)",
+        backdropFilter: "saturate(180%) blur(20px)",
         borderBottom: scrolled ? "1px solid var(--color-border)" : "1px solid transparent",
         transition: "background-color 0.2s ease, border-color 0.2s ease",
       }}
@@ -43,7 +44,7 @@ export default function Nav() {
         }}
       >
         <a
-          href="#home"
+          href="/#home"
           style={{ fontSize: 14, fontWeight: 600, letterSpacing: "-0.01em" }}
         >
           Freza Majithia
@@ -51,10 +52,11 @@ export default function Nav() {
         <ul
           style={{
             display: "flex",
-            gap: 32,
+            gap: 28,
             listStyle: "none",
             margin: 0,
             padding: 0,
+            flexWrap: "wrap",
           }}
         >
           {LINKS.map((link) => (

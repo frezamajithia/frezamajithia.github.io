@@ -199,15 +199,65 @@ export default function CaseStudy({ project }: { project: ProjectContent }) {
         </div>
       </section>
 
+      {project.figmaEmbedUrl && (
+        <section className="section-divider">
+          <div className="container" style={{ paddingTop: 64, paddingBottom: 64 }}>
+            <p className="eyebrow">Prototype</p>
+            <p className="body" style={{ marginBottom: 20, fontSize: 15 }}>
+              Click into the frame below to explore it directly, or open it
+              full-screen in Figma.
+            </p>
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                maxWidth: 720,
+                aspectRatio: "16 / 9",
+                borderRadius: 16,
+                overflow: "hidden",
+                border: "1px solid var(--color-border)",
+              }}
+            >
+              <iframe
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: "none",
+                }}
+                src={project.figmaEmbedUrl}
+                allowFullScreen
+              />
+            </div>
+            {project.figmaViewUrl && (
+              <a
+                href={project.figmaViewUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="link-arrow"
+                style={{ display: "inline-block", marginTop: 16 }}
+              >
+                Open in Figma &rarr;
+              </a>
+            )}
+          </div>
+        </section>
+      )}
+
       {project.screens.length > 0 && (
         <section className="section-divider">
           <div className="container" style={{ paddingTop: 64, paddingBottom: 64 }}>
-            <p className="eyebrow">Final Design</p>
+            <p className="eyebrow">
+              {project.figmaEmbedUrl ? "More Screens" : "Final Design"}
+            </p>
             <div
               style={{
                 display: "flex",
                 flexDirection: "column",
-                gap: 32,
+                alignItems: "center",
+                gap: 24,
                 marginTop: 16,
               }}
             >
@@ -219,6 +269,7 @@ export default function CaseStudy({ project }: { project: ProjectContent }) {
                   alt={project.title}
                   style={{
                     width: "100%",
+                    maxWidth: 420,
                     borderRadius: 16,
                     border: "1px solid var(--color-border)",
                   }}

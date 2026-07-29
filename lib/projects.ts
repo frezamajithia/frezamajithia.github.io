@@ -21,6 +21,8 @@ export type ProjectContent = {
   meta?: ProjectMeta;
   liveUrl?: string;
   repoUrl?: string;
+  figmaEmbedUrl?: string; // embed.figma.com URL for an inline clickable prototype
+  figmaViewUrl?: string; // www.figma.com URL to open the prototype full-screen
 };
 
 export const PROJECTS: ProjectContent[] = [
@@ -83,14 +85,7 @@ export const PROJECTS: ProjectContent[] = [
     goalOrRole:
       "Responsible for the database, UI, and parts of both the frontend and backend, plus documentation, across a team of four.",
     process: ["Wireframes and UI design", "Flutter build", "Local storage and REST APIs", "Testing"],
-    screens: [
-      "/projects/biteful-start.jpg",
-      "/projects/biteful-view-store.jpg",
-      "/projects/biteful-product-info.jpg",
-      "/projects/biteful-cart.jpg",
-      "/projects/biteful-place-order.jpg",
-      "/projects/biteful-tracking.jpg",
-    ],
+    screens: [],
     learnings:
       "I learned that as much as I love designing UI, I need to stay mindful of feasibility, especially under a time constraint, so my developers can actually build what I design. That meant stepping into the coding side more than I usually would. Reusable, transferable UI components make the biggest difference for a team trying to ship on time.",
     meta: {
@@ -101,6 +96,10 @@ export const PROJECTS: ProjectContent[] = [
       skills: ["Mobile Development", "State Management", "API Integration", "UI Design"],
     },
     repoUrl: "https://github.com/frezamajithia/biteful-final",
+    figmaEmbedUrl:
+      "https://embed.figma.com/proto/mDJnev8j6a3rU1zMg2Otc8/Biteful?node-id=52-311&p=f&viewport=408%2C240%2C0.5&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A9&page-id=0%3A1&embed-host=share",
+    figmaViewUrl:
+      "https://www.figma.com/proto/mDJnev8j6a3rU1zMg2Otc8/Biteful?node-id=52-311&p=f&viewport=408%2C240%2C0.5&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A9&page-id=0%3A1",
   },
   {
     slug: "otucommute",
@@ -120,15 +119,13 @@ export const PROJECTS: ProjectContent[] = [
       "Wireframe the dashboard, matches, and planner",
       "Prototype in Figma",
     ],
-    screens: [
-      "/projects/otucommute-start.jpg",
-      "/projects/otucommute-carpool.jpg",
-      "/projects/otucommute-nearby.jpg",
-      "/projects/otucommute-feed.jpg",
-      "/projects/otucommute-planner.jpg",
-    ],
+    screens: [],
     learnings:
       "Designing OtuCommute showed me it's a much more needed, and complicated, use case than it first appears, especially for students commuting through Canadian winters. I had to balance three goals at once: keep it easy to navigate, give it features people would actually find useful, and make it feel modern enough that students would want to use and trust it.",
+    figmaEmbedUrl:
+      "https://embed.figma.com/proto/pxwc40k37TU0uatoEtkUg7/OtuCommute?node-id=1-4&p=f&viewport=443%2C115%2C0.56&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A4&page-id=0%3A1&embed-host=share",
+    figmaViewUrl:
+      "https://www.figma.com/proto/pxwc40k37TU0uatoEtkUg7/OtuCommute?node-id=1-4&p=f&viewport=443%2C115%2C0.56&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A4&page-id=0%3A1",
   },
   {
     slug: "elanors-winery",
@@ -148,15 +145,13 @@ export const PROJECTS: ProjectContent[] = [
       "Build a moodboard and palette",
       "High-fidelity screens and type system",
     ],
-    screens: [
-      "/projects/elanor-brief.jpg",
-      "/projects/elanor-wireframes.jpg",
-      "/projects/elanor-moodboard.jpg",
-      "/projects/elanor-homepage.jpg",
-      "/projects/elanor-cover.jpg",
-    ],
+    screens: [],
     learnings:
       "This was one of my first real UI projects, and it taught me how tricky, yet essential, it is to actually put yourself in the shoes of your target audience. Writing out clear step-by-step flows, and imagining conversations with an ideal customer, made a huge difference in making sure the product actually made sense end to end. Even though the brief came from a generator rather than a real client, I approached it exactly as I would a live project.",
+    figmaEmbedUrl:
+      "https://embed.figma.com/proto/jCB0EQJvwbHt7HFNMru8GW/Elanor-Ecom-v1?node-id=71-123&viewport=-4%2C418%2C0.71&scaling=scale-down&content-scaling=fixed&starting-point-node-id=71%3A123&page-id=67%3A111&embed-host=share",
+    figmaViewUrl:
+      "https://www.figma.com/proto/jCB0EQJvwbHt7HFNMru8GW/Elanor-Ecom-v1?node-id=71-123&viewport=-4%2C418%2C0.71&scaling=scale-down&content-scaling=fixed&starting-point-node-id=71%3A123&page-id=67%3A111",
   },
   {
     slug: "pantrypal",
@@ -177,17 +172,7 @@ export const PROJECTS: ProjectContent[] = [
       "Wireframes and prototyping",
       "Usability testing",
     ],
-    screens: [
-      "/projects/pantrypal-fig1-splash.jpg",
-      "/projects/pantrypal-fig2-login.jpg",
-      "/projects/pantrypal-fig3-home.jpg",
-      "/projects/pantrypal-fig4-pantry.jpg",
-      "/projects/pantrypal-fig5-suggestions.jpg",
-      "/projects/pantrypal-fig6-recipe.jpg",
-      "/projects/pantrypal-fig7-shopping.jpg",
-      "/projects/pantrypal-fig8-profile.jpg",
-      "/projects/pantrypal-storyboard.jpg",
-    ],
+    screens: [],
     learnings:
       "When we tested this with users, some were actually more open to trusting the AI's recommendations than we expected, though they wished it felt more customizable to their own taste. If this were a real product, the next step would be making the AI trainable, or adding real support from an agent, so users feel safer about how their data is handled and stored, while still getting recipes that actually fit what they like.",
     meta: {
@@ -203,6 +188,10 @@ export const PROJECTS: ProjectContent[] = [
         "Requirements Gathering",
       ],
     },
+    figmaEmbedUrl:
+      "https://embed.figma.com/proto/Bb8prY9X0X2bmNDE6mCvjy/PantryPal?node-id=21-1036&p=f&viewport=-1110%2C91%2C0.42&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed-host=share",
+    figmaViewUrl:
+      "https://www.figma.com/proto/Bb8prY9X0X2bmNDE6mCvjy/PantryPal?node-id=21-1036&p=f&viewport=-1110%2C91%2C0.42&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
   },
 ];
 

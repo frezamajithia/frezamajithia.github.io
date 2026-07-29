@@ -90,7 +90,7 @@ export default function Projects() {
         <div style={{ marginTop: 96, marginBottom: 40 }}>
           <p className="eyebrow">UX Explorations</p>
           <p className="body" style={{ maxWidth: 560 }}>
-            Design case studies — problem, goal, process, and screens.
+            Design case studies: problem, goal, process, and screens.
           </p>
         </div>
 

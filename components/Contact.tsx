@@ -24,7 +24,7 @@ export default function Contact() {
             </h2>
             <p className="body" style={{ maxWidth: 440 }}>
               Open to full-time roles and select freelance projects. The
-              fastest way to reach me is email — I usually reply within a
+              fastest way to reach me is email. I usually reply within a
               couple of days.
             </p>
           </div>

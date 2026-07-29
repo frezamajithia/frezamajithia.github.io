@@ -2,17 +2,17 @@ const EXPERIENCE = [
   {
     role: "Blockchain & Web3 Security Extern",
     org: "Webacy (Remote)",
-    period: "May 2024 — Jun 2024",
+    period: "May 2024 to Jun 2024",
   },
   {
     role: "Freelance Web Developer",
     org: "Dubai, UAE",
-    period: "Jan 2022 — Mar 2022",
+    period: "Jan 2022 to Mar 2022",
   },
   {
     role: "B.Sc (Honours), Computer Science",
     org: "Ontario Tech University",
-    period: "Sept 2021 — Apr 2026",
+    period: "Sept 2021 to Apr 2026",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function Resume() {
             <p className="body" style={{ maxWidth: 460, fontSize: 15 }}>
               Tailored resumes are available for Software Engineering,
               Product, IT Systems, Quality Engineering, and Cybersecurity
-              opportunities — reach out and I'll send the right one.
+              opportunities. Reach out and I'll send the right one.
             </p>
           </div>
           <a href="/resume.pdf" className="btn btn-primary" download>

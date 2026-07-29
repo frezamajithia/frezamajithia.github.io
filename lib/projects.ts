@@ -30,24 +30,30 @@ export const PROJECTS: ProjectContent[] = [
     kind: "project",
     summary:
       "A full-stack calendar and task management platform built to bring dashboards, task categorization, and analytics into one place.",
-    cover: "",
+    cover: "/projects/taskleaf-dashboard.jpg",
     tags: ["Full Stack", "Next.js", "FastAPI"],
     problem:
-      "Students and young professionals juggle tasks, deadlines, and calendars across too many disconnected apps, losing time to app-switching instead of actually getting things done.",
-    goalOrRole: "Full Stack Developer — designed and built roughly 89% of the app, from UI through auth and integrations.",
+      "Students and young professionals juggle tasks, deadlines, and calendars across too many disconnected apps, losing time to app switching instead of actually getting things done.",
+    goalOrRole:
+      "Full Stack Developer. Designed and built roughly 89 percent of the app, from UI through auth and integrations.",
     process: [
-      "Planning & architecture",
-      "Auth & API design",
-      "Calendar & weather integration",
-      "Automated testing & CI/CD",
+      "Planning and architecture",
+      "Auth and API design",
+      "Calendar and weather integration",
+      "Automated testing and CI/CD",
       "Deployment",
     ],
-    screens: [],
+    screens: [
+      "/projects/taskleaf-login.jpg",
+      "/projects/taskleaf-dashboard.jpg",
+      "/projects/taskleaf-calendar.jpg",
+      "/projects/taskleaf-analytics.jpg",
+    ],
     learnings:
-      "TODO — what stood out most building TaskLeaf end-to-end (auth, calendar sync, CI/CD)? Send a sentence or two and I'll drop it in.",
+      "This was my first full-stack web application, and while it was incredibly rewarding and a project I'll always be proud of, it taught me how much work goes into building something you truly care about. Every small detail and flaw sticks out to you as the builder in a way it never would to someone else. The most challenging part on the frontend was getting the UI to feel seamless: I built custom components first, then switched to shadcn UI components partway through once I couldn't get my own to feel as polished. On the backend, setting up Google OAuth was the hardest part. Since this was an independent project, we ran into real security limitations and eventually had to take that feature down rather than risk bad security practices. I'm grateful for the guidance I got on the DevOps side; it took some quick learning, but we set up Docker and a testing pipeline that made running the app far smoother. Deploying with Vercel and Railway was genuinely enjoyable, and since both are widely used in the industry, it was a great way to actually understand how real deployment works.",
     meta: {
-      role: "Full Stack Developer (~89% of build)",
-      duration: "~6 weeks",
+      role: "Full Stack Developer (about 89% of the build)",
+      duration: "About 6 weeks",
       team: "2 (with a teammate)",
       tools: [
         "Next.js",
@@ -58,6 +64,7 @@ export const PROJECTS: ProjectContent[] = [
         "Google OAuth",
         "Google Calendar API",
         "GitHub Actions",
+        "shadcn/ui",
       ],
       skills: ["Full-Stack Development", "API Design", "Authentication", "CI/CD", "Teamwork"],
     },
@@ -69,19 +76,27 @@ export const PROJECTS: ProjectContent[] = [
     kind: "project",
     summary:
       "A cross-platform food delivery app covering restaurant browsing, cart, checkout, and live order tracking.",
-    cover: "/projects/biteful-cover.jpg",
+    cover: "/projects/biteful-overview.jpg",
     tags: ["Mobile", "Flutter"],
     problem:
-      "TODO — one or two sentences on the specific problem Biteful was solving (e.g. what existing delivery apps get wrong).",
-    goalOrRole: "Design and development — UI/UX plus state management and local data.",
-    process: ["Wireframes & UI design", "Flutter build", "Local storage & REST APIs", "Testing"],
-    screens: ["/projects/biteful-cover.jpg"],
+      "The brief was to design and build a more unique, optimized take on an app we already use often. We took inspiration from apps like UberEats and DoorDash, aiming for a food delivery app with a slightly more playful UI that was still genuinely useful.",
+    goalOrRole:
+      "Responsible for the database, UI, and parts of both the frontend and backend, plus documentation, across a team of four.",
+    process: ["Wireframes and UI design", "Flutter build", "Local storage and REST APIs", "Testing"],
+    screens: [
+      "/projects/biteful-start.jpg",
+      "/projects/biteful-view-store.jpg",
+      "/projects/biteful-product-info.jpg",
+      "/projects/biteful-cart.jpg",
+      "/projects/biteful-place-order.jpg",
+      "/projects/biteful-tracking.jpg",
+    ],
     learnings:
-      "TODO — what did you take away from building this one (e.g. working with Provider/GoRouter, or a UX decision you made)?",
+      "I learned that as much as I love designing UI, I need to stay mindful of feasibility, especially under a time constraint, so my developers can actually build what I design. That meant stepping into the coding side more than I usually would. Reusable, transferable UI components make the biggest difference for a team trying to ship on time.",
     meta: {
-      role: "TODO — confirm your exact role (solo, or with a team?)",
-      duration: "~6 weeks",
-      team: "TODO — confirm team size",
+      role: "UI, database, some frontend and backend, documentation",
+      duration: "About 6 weeks",
+      team: "4 (group project)",
       tools: ["Figma", "Flutter", "Dart", "SQLite", "REST APIs", "Provider", "GoRouter"],
       skills: ["Mobile Development", "State Management", "API Integration", "UI Design"],
     },
@@ -93,10 +108,10 @@ export const PROJECTS: ProjectContent[] = [
     kind: "exploration",
     summary:
       "A carpool matching and trip planning concept for students commuting to Ontario Tech, especially through Canadian winters.",
-    cover: "/projects/otucommute-cover.jpg",
+    cover: "/projects/otucommute-overview.jpg",
     tags: ["Mobile", "Product Design"],
     problem:
-      "Commuting students coordinating carpools rely on scattered group chats and word of mouth, making it hard to find a verified, reliable ride on short notice — a bigger problem than it first appears, especially in winter.",
+      "Commuting students coordinating carpools rely on scattered group chats and word of mouth, making it hard to find a verified, reliable ride on short notice. It's a bigger problem than it first appears, especially in winter.",
     goalOrRole:
       "Design a single dashboard balancing three goals at once: easy to navigate, genuinely useful features, and modern enough that students would actually want to use and trust it.",
     process: [
@@ -105,9 +120,15 @@ export const PROJECTS: ProjectContent[] = [
       "Wireframe the dashboard, matches, and planner",
       "Prototype in Figma",
     ],
-    screens: ["/projects/otucommute-cover.jpg"],
+    screens: [
+      "/projects/otucommute-start.jpg",
+      "/projects/otucommute-carpool.jpg",
+      "/projects/otucommute-nearby.jpg",
+      "/projects/otucommute-feed.jpg",
+      "/projects/otucommute-planner.jpg",
+    ],
     learnings:
-      "Designing OtuCommute showed me it's a much more needed — and complicated — use case than it first appears, especially for students commuting through Canadian winters. I had to balance three goals at once: keep it easy to navigate, give it features people would actually find useful, and make it feel modern enough that students would want to use and trust it.",
+      "Designing OtuCommute showed me it's a much more needed, and complicated, use case than it first appears, especially for students commuting through Canadian winters. I had to balance three goals at once: keep it easy to navigate, give it features people would actually find useful, and make it feel modern enough that students would want to use and trust it.",
   },
   {
     slug: "elanors-winery",
@@ -120,7 +141,7 @@ export const PROJECTS: ProjectContent[] = [
     problem:
       "A boutique winery needs an online store that feels as considered as its product, guiding a specific customer persona from discovery to checkout without friction.",
     goalOrRole:
-      "Design an end-to-end e-commerce experience — homepage, product detail, checkout, and confirmation — grounded in a defined user persona and task flow.",
+      "Design an end-to-end e-commerce experience: homepage, product detail, checkout, and confirmation, grounded in a defined user persona and task flow.",
     process: [
       "Define the persona and task flow",
       "Low-fidelity wireframes",
@@ -131,10 +152,11 @@ export const PROJECTS: ProjectContent[] = [
       "/projects/elanor-brief.jpg",
       "/projects/elanor-wireframes.jpg",
       "/projects/elanor-moodboard.jpg",
+      "/projects/elanor-homepage.jpg",
       "/projects/elanor-cover.jpg",
     ],
     learnings:
-      "This was one of my first real UI projects, and it taught me how tricky — yet essential — it is to actually put yourself in the shoes of your target audience. Writing out clear step-by-step flows, and imagining conversations with an ideal customer, made a huge difference in making sure the product actually made sense end to end. Even though the brief came from a generator rather than a real client, I approached it exactly as I would a live project.",
+      "This was one of my first real UI projects, and it taught me how tricky, yet essential, it is to actually put yourself in the shoes of your target audience. Writing out clear step-by-step flows, and imagining conversations with an ideal customer, made a huge difference in making sure the product actually made sense end to end. Even though the brief came from a generator rather than a real client, I approached it exactly as I would a live project.",
   },
   {
     slug: "pantrypal",
@@ -142,25 +164,35 @@ export const PROJECTS: ProjectContent[] = [
     kind: "exploration",
     summary:
       "An AI-assisted meal-planning app that turns pantry items into recipe suggestions, built around real user research.",
-    cover: "/projects/pantrypal-cover.jpg",
+    cover: "/projects/pantrypal-overview.jpg",
     tags: ["Mobile", "UX Research", "Prototyping"],
     problem:
       "Busy students, fitness-focused users, and sustainability-minded people all struggle with the same thing: deciding what to cook with what they already have, leading to decision fatigue, forgotten pantry items, and food waste.",
     goalOrRole:
       "UX research and design across the team: stakeholder interviews, personas, requirements, wireframes, and interactive Figma prototypes, iterated through usability testing.",
     process: [
-      "Stakeholder interviews & surveys",
-      "Personas & task analysis",
-      "Requirements & conceptual design",
-      "Wireframes & prototyping",
+      "Stakeholder interviews and surveys",
+      "Personas and task analysis",
+      "Requirements and conceptual design",
+      "Wireframes and prototyping",
       "Usability testing",
     ],
-    screens: ["/projects/pantrypal-flow.jpg", "/projects/pantrypal-cover.jpg"],
+    screens: [
+      "/projects/pantrypal-fig1-splash.jpg",
+      "/projects/pantrypal-fig2-login.jpg",
+      "/projects/pantrypal-fig3-home.jpg",
+      "/projects/pantrypal-fig4-pantry.jpg",
+      "/projects/pantrypal-fig5-suggestions.jpg",
+      "/projects/pantrypal-fig6-recipe.jpg",
+      "/projects/pantrypal-fig7-shopping.jpg",
+      "/projects/pantrypal-fig8-profile.jpg",
+      "/projects/pantrypal-storyboard.jpg",
+    ],
     learnings:
-      "TODO — what did usability testing reveal, or what would you change next? (You've got great raw material here — e.g. the 50% of users hesitant to trust AI with their data — happy to help turn that into a reflection.)",
+      "When we tested this with users, some were actually more open to trusting the AI's recommendations than we expected, though they wished it felt more customizable to their own taste. If this were a real product, the next step would be making the AI trainable, or adding real support from an agent, so users feel safer about how their data is handled and stored, while still getting recipes that actually fit what they like.",
     meta: {
-      role: "UX Research & Design",
-      duration: "~1.5 months",
+      role: "UX Research and Design",
+      duration: "About 1.5 months",
       team: "4 (group project)",
       tools: ["Figma"],
       skills: [

@@ -65,6 +65,30 @@ export default function CaseStudy({ project }: { project: ProjectContent }) {
             </span>
           ))}
         </div>
+        {(project.repoUrl || project.liveUrl) && (
+          <div style={{ display: "flex", gap: 16, marginTop: 28 }}>
+            {project.repoUrl && (
+              <a
+                href={project.repoUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="link-arrow"
+              >
+                View on GitHub &rarr;
+              </a>
+            )}
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="link-arrow"
+              >
+                Live demo &rarr;
+              </a>
+            )}
+          </div>
+        )}
       </section>
 
       {project.meta && (

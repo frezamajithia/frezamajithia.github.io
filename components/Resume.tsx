@@ -1,18 +1,18 @@
 const EXPERIENCE = [
   {
-    role: "TODO — your most recent role/title",
-    org: "TODO — company or organization",
-    period: "TODO — e.g. 2024 — Present",
+    role: "Blockchain & Web3 Security Extern",
+    org: "Webacy (Remote)",
+    period: "May 2024 — Jun 2024",
   },
   {
-    role: "TODO — previous role/title",
-    org: "TODO — company or organization",
-    period: "TODO — e.g. 2023 — 2024",
+    role: "Freelance Web Developer",
+    org: "Dubai, UAE",
+    period: "Jan 2022 — Mar 2022",
   },
   {
-    role: "B.Sc, Computer Science",
+    role: "B.Sc (Honours), Computer Science",
     org: "Ontario Tech University",
-    period: "TODO — confirm your years",
+    period: "Sept 2021 — Apr 2026",
   },
 ];
 

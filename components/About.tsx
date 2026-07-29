@@ -41,17 +41,16 @@ export default function About() {
               borderRadius: "50%",
               background: "var(--color-bg-subtle)",
               border: "1px solid var(--color-border)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "var(--color-text-secondary)",
-              fontSize: 13,
-              textAlign: "center",
               overflow: "hidden",
+              flexShrink: 0,
             }}
           >
-            {/* Swap this div for a real <img src="/headshot.jpg" /> */}
-            Your photo
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/headshot.jpg"
+              alt="Freza Majithia"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
           </div>
 
           <div>

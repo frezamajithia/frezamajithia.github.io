@@ -15,10 +15,10 @@ export type ProjectContent = {
   tags: string[];
   problem: string;
   goalOrRole: string; // "Goal" for explorations, "Role" for projects
-  process: string[]; // ordered steps, e.g. ["Research", "Wireframes", "Prototyping"]
+  process: string[]; // ordered steps
   screens: string[]; // image paths for the "final design" section
   learnings: string; // "What I Learned"
-  meta?: ProjectMeta; // only used for kind === "project"
+  meta?: ProjectMeta;
   liveUrl?: string;
   repoUrl?: string;
 };
@@ -29,64 +29,76 @@ export const PROJECTS: ProjectContent[] = [
     title: "TaskLeaf",
     kind: "project",
     summary:
-      "TODO — one-line summary of what TaskLeaf does and who it's for.",
-    cover: "", // TODO: add a screenshot to /public/projects/taskleaf-cover.jpg
+      "A full-stack calendar and task management platform built to bring dashboards, task categorization, and analytics into one place.",
+    cover: "",
     tags: ["Full Stack", "Next.js", "FastAPI"],
-    problem: "TODO — what problem was TaskLeaf solving, and for whom?",
-    goalOrRole: "Full Stack Developer", // TODO: confirm your role
+    problem:
+      "Students and young professionals juggle tasks, deadlines, and calendars across too many disconnected apps, losing time to app-switching instead of actually getting things done.",
+    goalOrRole: "Full Stack Developer — designed and built roughly 89% of the app, from UI through auth and integrations.",
     process: [
-      "TODO: step 1 (e.g. Planning)",
-      "TODO: step 2 (e.g. API design)",
-      "TODO: step 3 (e.g. Build)",
-      "TODO: step 4 (e.g. Testing)",
+      "Planning & architecture",
+      "Auth & API design",
+      "Calendar & weather integration",
+      "Automated testing & CI/CD",
+      "Deployment",
     ],
-    screens: [], // TODO: add screenshots
-    learnings: "TODO — what did you learn building this?",
+    screens: [],
+    learnings:
+      "TODO — what stood out most building TaskLeaf end-to-end (auth, calendar sync, CI/CD)? Send a sentence or two and I'll drop it in.",
     meta: {
-      role: "Full Stack Developer", // TODO confirm
-      duration: "8 weeks", // TODO confirm
-      team: "2", // TODO confirm
-      tools: ["Next.js", "FastAPI", "PostgreSQL", "Docker"], // TODO confirm
-      skills: ["Teamwork", "Planning", "Problem Solving", "API Design"], // TODO confirm
+      role: "Full Stack Developer (~89% of build)",
+      duration: "~6 weeks",
+      team: "2 (with a teammate)",
+      tools: [
+        "Next.js",
+        "FastAPI",
+        "PostgreSQL",
+        "Docker",
+        "JWT Auth",
+        "Google OAuth",
+        "Google Calendar API",
+        "GitHub Actions",
+      ],
+      skills: ["Full-Stack Development", "API Design", "Authentication", "CI/CD", "Teamwork"],
     },
+    repoUrl: "https://github.com/frezamajithia/taskleaf-app-gabe-freza",
   },
   {
     slug: "biteful",
     title: "Biteful",
     kind: "project",
-    summary: "An early-stage food ordering and delivery app concept.",
+    summary:
+      "A cross-platform food delivery app covering restaurant browsing, cart, checkout, and live order tracking.",
     cover: "/projects/biteful-cover.jpg",
-    tags: ["Mobile", "Early Concept"],
+    tags: ["Mobile", "Flutter"],
     problem:
-      "TODO — what gap in food delivery apps was Biteful meant to address?",
-    goalOrRole: "TODO — your role (e.g. Product Designer)",
-    process: [
-      "TODO: e.g. Competitive research",
-      "TODO: e.g. Wireframes",
-      "TODO: e.g. Visual design",
-    ],
+      "TODO — one or two sentences on the specific problem Biteful was solving (e.g. what existing delivery apps get wrong).",
+    goalOrRole: "Design and development — UI/UX plus state management and local data.",
+    process: ["Wireframes & UI design", "Flutter build", "Local storage & REST APIs", "Testing"],
     screens: ["/projects/biteful-cover.jpg"],
-    learnings: "TODO — what did you learn from this one?",
+    learnings:
+      "TODO — what did you take away from building this one (e.g. working with Provider/GoRouter, or a UX decision you made)?",
     meta: {
-      role: "TODO",
-      duration: "TODO",
-      team: "TODO",
-      tools: ["Figma"],
-      skills: ["TODO"],
+      role: "TODO — confirm your exact role (solo, or with a team?)",
+      duration: "~6 weeks",
+      team: "TODO — confirm team size",
+      tools: ["Figma", "Flutter", "Dart", "SQLite", "REST APIs", "Provider", "GoRouter"],
+      skills: ["Mobile Development", "State Management", "API Integration", "UI Design"],
     },
+    repoUrl: "https://github.com/frezamajithia/biteful-final",
   },
   {
     slug: "otucommute",
     title: "OtuCommute",
     kind: "exploration",
     summary:
-      "A carpool matching and trip planning concept for students commuting to Ontario Tech.",
+      "A carpool matching and trip planning concept for students commuting to Ontario Tech, especially through Canadian winters.",
     cover: "/projects/otucommute-cover.jpg",
     tags: ["Mobile", "Product Design"],
     problem:
-      "Commuting students coordinating carpools rely on scattered group chats and word of mouth, making it hard to find a verified, reliable ride on short notice.",
+      "Commuting students coordinating carpools rely on scattered group chats and word of mouth, making it hard to find a verified, reliable ride on short notice — a bigger problem than it first appears, especially in winter.",
     goalOrRole:
-      "Design a single dashboard where students can find verified carpool matches, see nearby commuters in real time, and plan a trip end-to-end.",
+      "Design a single dashboard balancing three goals at once: easy to navigate, genuinely useful features, and modern enough that students would actually want to use and trust it.",
     process: [
       "Research commuter pain points",
       "Map the core user flow",
@@ -95,7 +107,7 @@ export const PROJECTS: ProjectContent[] = [
     ],
     screens: ["/projects/otucommute-cover.jpg"],
     learnings:
-      "TODO — what stood out to you designing this (a tradeoff you made, something testing revealed, etc.)?",
+      "Designing OtuCommute showed me it's a much more needed — and complicated — use case than it first appears, especially for students commuting through Canadian winters. I had to balance three goals at once: keep it easy to navigate, give it features people would actually find useful, and make it feel modern enough that students would want to use and trust it.",
   },
   {
     slug: "elanors-winery",
@@ -122,30 +134,43 @@ export const PROJECTS: ProjectContent[] = [
       "/projects/elanor-cover.jpg",
     ],
     learnings:
-      "TODO — what did defining a persona/task flow change about your design decisions?",
+      "This was one of my first real UI projects, and it taught me how tricky — yet essential — it is to actually put yourself in the shoes of your target audience. Writing out clear step-by-step flows, and imagining conversations with an ideal customer, made a huge difference in making sure the product actually made sense end to end. Even though the brief came from a generator rather than a real client, I approached it exactly as I would a live project.",
   },
   {
     slug: "pantrypal",
     title: "PantryPal",
     kind: "exploration",
     summary:
-      "An app that helps people cook with what they already have, from pantry scan to shopping list.",
+      "An AI-assisted meal-planning app that turns pantry items into recipe suggestions, built around real user research.",
     cover: "/projects/pantrypal-cover.jpg",
     tags: ["Mobile", "UX Research", "Prototyping"],
     problem:
-      "Busy students struggle to manage groceries and reduce food waste — they don't know what's about to expire or what they can actually cook with it.",
+      "Busy students, fitness-focused users, and sustainability-minded people all struggle with the same thing: deciding what to cook with what they already have, leading to decision fatigue, forgotten pantry items, and food waste.",
     goalOrRole:
-      "Design a flow that turns a scanned pantry into a confident meal decision: from item scan, to a filtered recipe suggestion, to an auto-built shopping list for what's missing.",
+      "UX research and design across the team: stakeholder interviews, personas, requirements, wireframes, and interactive Figma prototypes, iterated through usability testing.",
     process: [
-      "Stakeholder interviews",
-      "Personas",
-      "User flows",
-      "Figma prototyping",
+      "Stakeholder interviews & surveys",
+      "Personas & task analysis",
+      "Requirements & conceptual design",
+      "Wireframes & prototyping",
       "Usability testing",
     ],
     screens: ["/projects/pantrypal-flow.jpg", "/projects/pantrypal-cover.jpg"],
     learnings:
-      "TODO — what did usability testing reveal, or what would you change next?",
+      "TODO — what did usability testing reveal, or what would you change next? (You've got great raw material here — e.g. the 50% of users hesitant to trust AI with their data — happy to help turn that into a reflection.)",
+    meta: {
+      role: "UX Research & Design",
+      duration: "~1.5 months",
+      team: "4 (group project)",
+      tools: ["Figma"],
+      skills: [
+        "UX Research",
+        "Wireframing",
+        "Prototyping",
+        "Usability Testing",
+        "Requirements Gathering",
+      ],
+    },
   },
 ];
 

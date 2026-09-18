@@ -1,5 +1,11 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Process",
+  description: "How Freza Majithia approaches every project, from understanding the problem through iteration.",
+};
 
 const STEPS = [
   "Understand",

@@ -41,7 +41,11 @@ export default function CaseStudy({ project }: { project: ProjectContent }) {
 
       <section className="container" style={{ paddingTop: 32, paddingBottom: 56 }}>
         <p className="eyebrow">
-          {project.kind === "project" ? "Project" : "UX Exploration"}
+          {project.kind === "project"
+            ? "Project"
+            : project.kind === "strategy"
+            ? "Case Study"
+            : "UX Exploration"}
         </p>
         <h1 className="h1" style={{ fontSize: "clamp(32px, 6vw, 56px)" }}>
           {project.title}
@@ -65,8 +69,8 @@ export default function CaseStudy({ project }: { project: ProjectContent }) {
             </span>
           ))}
         </div>
-        {(project.repoUrl || project.liveUrl) && (
-          <div style={{ display: "flex", gap: 16, marginTop: 28 }}>
+        {(project.repoUrl || project.liveUrl || project.downloadUrl) && (
+          <div style={{ display: "flex", gap: 16, marginTop: 28, flexWrap: "wrap" }}>
             {project.repoUrl && (
               <a
                 href={project.repoUrl}
@@ -87,9 +91,32 @@ export default function CaseStudy({ project }: { project: ProjectContent }) {
                 Live demo &rarr;
               </a>
             )}
+            {project.downloadUrl && (
+              <a href={project.downloadUrl} download className="link-arrow">
+                {project.downloadLabel || "Download"} &rarr;
+              </a>
+            )}
           </div>
         )}
       </section>
+
+      {project.cover && !project.figmaEmbedUrl && project.screens.length === 0 && (
+        <section className="container" style={{ paddingBottom: 56 }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={project.cover}
+            alt={project.title}
+            style={{
+              width: "100%",
+              maxWidth: 900,
+              display: "block",
+              margin: "0 auto",
+              borderRadius: 16,
+              border: "1px solid var(--color-border)",
+            }}
+          />
+        </section>
+      )}
 
       {project.meta && (
         <section className="section-divider">
@@ -143,7 +170,7 @@ export default function CaseStudy({ project }: { project: ProjectContent }) {
             </div>
             <div>
               <p className="eyebrow">
-                {project.kind === "project" ? "My Role" : "Goal"}
+                {project.kind === "exploration" ? "Goal" : "My Role"}
               </p>
               <p
                 className="body"

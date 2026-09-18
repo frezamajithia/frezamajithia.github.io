@@ -156,6 +156,14 @@ h1, h2, h3 {
   gap: 8px;
 }
 
+.project-card-cover {
+  transition: border-color 0.2s ease;
+}
+
+a:hover .project-card-cover {
+  border-color: var(--color-accent) !important;
+}
+
 @media (max-width: 734px) {
   :root {
     --section-padding-y: 88px;

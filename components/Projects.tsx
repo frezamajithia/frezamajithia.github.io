@@ -6,6 +6,7 @@ function ProjectCard({ project }: { project: ProjectContent }) {
     <Link href={`/projects/${project.slug}`} style={{ display: "block" }}>
       <article>
         <div
+          className="project-card-cover"
           style={{
             aspectRatio: "4 / 3",
             background: "var(--color-bg-subtle)",
@@ -65,6 +66,7 @@ function ProjectCard({ project }: { project: ProjectContent }) {
 export default function Projects() {
   const realProjects = PROJECTS.filter((p) => p.kind === "project");
   const explorations = PROJECTS.filter((p) => p.kind === "exploration");
+  const strategy = PROJECTS.filter((p) => p.kind === "strategy");
 
   return (
     <section id="projects" className="section section-divider">
@@ -87,10 +89,35 @@ export default function Projects() {
           ))}
         </div>
 
+        {strategy.length > 0 && (
+          <>
+            <div style={{ marginTop: 96, marginBottom: 40 }}>
+              <p className="eyebrow">Strategy & Case Studies</p>
+              <p className="body" style={{ maxWidth: 560 }}>
+                Business and change management case studies: problem,
+                approach, and outcome.
+              </p>
+            </div>
+            <div
+              className="project-grid"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+                gap: "48px 40px",
+              }}
+            >
+              {strategy.map((project) => (
+                <ProjectCard key={project.slug} project={project} />
+              ))}
+            </div>
+          </>
+        )}
+
         <div style={{ marginTop: 96, marginBottom: 40 }}>
           <p className="eyebrow">UX Explorations</p>
           <p className="body" style={{ maxWidth: 560 }}>
-            Design case studies: problem, goal, process, and screens.
+            Design case studies: problem, goal, process, and an interactive
+            prototype.
           </p>
         </div>
 

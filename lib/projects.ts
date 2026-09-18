@@ -9,12 +9,12 @@ export type ProjectMeta = {
 export type ProjectContent = {
   slug: string;
   title: string;
-  kind: "project" | "exploration"; // "project" = real build, "exploration" = design-only
+  kind: "project" | "exploration" | "strategy"; // "project" = real build, "exploration" = design-only, "strategy" = business/change case study
   summary: string; // one-line, used on homepage grid
   cover: string;
   tags: string[];
   problem: string;
-  goalOrRole: string; // "Goal" for explorations, "Role" for projects
+  goalOrRole: string; // "Goal" for explorations, "Role" for projects/strategy
   process: string[]; // ordered steps
   screens: string[]; // image paths for the "final design" section
   learnings: string; // "What I Learned"
@@ -23,6 +23,8 @@ export type ProjectContent = {
   repoUrl?: string;
   figmaEmbedUrl?: string; // embed.figma.com URL for an inline clickable prototype
   figmaViewUrl?: string; // www.figma.com URL to open the prototype full-screen
+  downloadUrl?: string; // a file to download (e.g. a KPI workbook)
+  downloadLabel?: string; // label for the download link
 };
 
 export const PROJECTS: ProjectContent[] = [
@@ -192,6 +194,45 @@ export const PROJECTS: ProjectContent[] = [
       "https://embed.figma.com/proto/Bb8prY9X0X2bmNDE6mCvjy/PantryPal?node-id=21-1036&p=f&viewport=-1110%2C91%2C0.42&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed-host=share",
     figmaViewUrl:
       "https://www.figma.com/proto/Bb8prY9X0X2bmNDE6mCvjy/PantryPal?node-id=21-1036&p=f&viewport=-1110%2C91%2C0.42&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
+  },
+  {
+    slug: "genai-cloud-transformation",
+    title: "Enterprise GenAI & Cloud Transformation",
+    kind: "strategy",
+    summary:
+      "A self-directed change management simulation for a 1,200-employee company adopting a generative AI tool and migrating to a hybrid cloud.",
+    cover: "/projects/genai-cloud-cover.jpg",
+    tags: ["Change Management", "ADKAR", "Stakeholder Strategy"],
+    problem:
+      "A simulated mid-sized company is making two changes at once: migrating legacy systems to an open hybrid cloud, and rolling out a generative AI productivity tool to four departments. Legacy IT engineers, whose work is most affected by the cloud migration, and non-technical business units have very different concerns, and both groups need a plan that addresses their specific resistance points rather than a single generic rollout.",
+    goalOrRole:
+      "Independent case study, designed solo. Built the full change strategy: stakeholder matrix, ADKAR baseline, champion network, training roadmap, communications plan, and KPI dashboard.",
+    process: [
+      "Scenario and stakeholder mapping",
+      "ADKAR baseline and barrier analysis",
+      "Innovation Champions network design",
+      "4-week gamified training roadmap",
+      "Communications plan",
+      "Change KPI dashboard",
+    ],
+    screens: [],
+    learnings:
+      "Self-teaching the Prosci ADKAR framework and applying it end to end showed me how differently the same change lands across groups. IT engineers, for example, scored fine on Awareness but low on Desire, so more training would not have helped them. What they needed was a clear answer to what is in it for me: a reskilling path and a real seat in the migration design. Building the KPI dashboard reinforced the same lesson with data: overall adoption looked reasonably close to target, but that average was hiding Finance sitting well below it while Customer Service was already past it. A general push would have wasted effort on departments that did not need it. The real fix was targeted: more champion coverage and compliance-approved use cases for Finance, and sharing what was already working in Customer Service with Operations and HR.",
+    meta: {
+      role: "Independent case study (self-directed simulation)",
+      duration: "2026",
+      team: "Solo",
+      tools: ["Prosci ADKAR Framework", "Excel", "Stakeholder Matrix", "KPI Dashboard Design"],
+      skills: [
+        "Change Management",
+        "Stakeholder Analysis",
+        "Training Program Design",
+        "Data Visualization",
+        "Risk Mitigation",
+      ],
+    },
+    downloadUrl: "/downloads/change-kpi-dashboard-simulation.xlsx",
+    downloadLabel: "Download the Change KPI Dashboard (.xlsx)",
   },
 ];
 

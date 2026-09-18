@@ -3,16 +3,9 @@ import CaseStudy from "@/components/CaseStudy";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { notFound } from "next/navigation";
-import type { Metadata } from "next";
-
-const project = getProjectBySlug("elanors-winery");
-
-export const metadata: Metadata = {
-  title: project?.title ?? "Project",
-  description: project?.summary,
-};
 
 export default function Page() {
+  const project = getProjectBySlug("genai-cloud-transformation");
   if (!project) return notFound();
   return (
     <>
